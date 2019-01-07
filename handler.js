@@ -22,7 +22,7 @@ module.exports.hello = async (event, context, callback) => {
 
 // serverless deploy--stage production
 
-// untuk check logs function yg sudah di deploy berdasarkan stage nya
+// untuk check logs function yg sudah di deploy berdasarkan stage nya.
 // sls logs -f hello --stage production --startTime 10m
 
 // untuk me remove function yang sudah di deploy di lambda

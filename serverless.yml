@@ -1,0 +1,20 @@
+service: wut-up-world
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: ap-southeast-1
+  include:
+    - utils/**
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: messsage/{name}
+          method: get
+      # ini untuk cron job
+      # - schedule: rate(1 minute)
+plugins:
+  - serverless-offline
